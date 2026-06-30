@@ -8,7 +8,7 @@
     --text-color:#333333;
     --header-bg:#f8f9fa;
     --shadow:rgba(0,0,0,0.1);
-    --gradient:linear-gradient(to right, #00c6ff, #0072ff 100%);
+    --gradient:linear-gradient(135deg, #1cb5e0 0%, #0b5ed7 50%, #1a237e 100%);
     --button-bg:#007bff;
     --accent-color:#007bff;
     --button-hover:#0056b3;
@@ -30,7 +30,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s , color 0.3s;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -80,21 +80,46 @@ nav a:hover{
     transform: scale(1.3);
 }
 
-#Hero{
+.hero{
+    min-height: 80vh;
     background: var(--gradient);
     color: white;
-    padding: 4rem 2rem;
+    padding: 5rem 1rem;
     animation: fadeIn 1s ease-in;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content{
+     text-align: center;
 }
 
-#Hero H1 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
+.skills{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 25px 0;
 }
-#Hero p {
-    margin-bottom: 1.6rem;
-    font-size: 1.5rem;
+
+.skills span{
+    padding: 8px 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.hero H1 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.hero p {
+    margin: 1.2rem auto;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .btn{
@@ -103,11 +128,12 @@ nav a:hover{
     text-decoration: none;
     font-size: 1.1rem;
     padding: 0.76rem 1.4rem;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     display: inline-block; 
     transition: background-color 0.3s , transform 0.3s ;
     border: none;
+    box-shadow:  0 8px 16px rgba(0,0,0,0.2);
 }
 
 .btn:hover{
@@ -121,7 +147,7 @@ section {
     animation: fadeIn 1s ease-in;
 }
 
- h2 {
+h2 {
     color: var(--accent-color);
     font-size: 2rem;
     text-align: center;
@@ -135,8 +161,8 @@ section {
     gap: 40px;
 }
 .Profile-pic{
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent-color);
@@ -189,6 +215,9 @@ section {
 .project h3 {
     color: var(--accent-color);
 }
+.project p{
+    margin-bottom: 10px;
+}
 .demoLink{
     background-color: var(--button-bg);
     color: white;
@@ -207,6 +236,25 @@ section {
 .demoLink:hover{
     background-color: var(--button-hover);
     transform: translateY(-2px);
+}
+
+
+.tech-stack{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    list-style: none;
+    margin: 14px 0;
+}
+
+.tech-stack li{
+    background: #eaf4ff;
+    color: #0d6efd;
+    padding: 5px 10px;
+    border: 1px solid #0d6efd;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 footer{
